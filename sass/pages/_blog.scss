@@ -1,0 +1,119 @@
+@use "../abstracts" as a;
+.team {
+  &__header {
+    .team--heading {
+      color: var(--text-color-red);
+      font-size: 3rem;
+      margin-bottom: 6rem;
+      position: relative;
+    }
+    .team--heading::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      background-color: #fff;
+      width: 5rem;
+      height: 3px;
+    }
+  }
+}
+.blog {
+  padding: 5rem 0;
+  &__header {
+    .blog--heading {
+      color: var(--text-color-red);
+      font-size: 3rem;
+      margin-bottom: 6rem;
+      position: relative;
+    }
+    .blog--heading::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      background-color: #fff;
+      width: 5rem;
+      height: 3px;
+    }
+  }
+  &__container {
+    &--header {
+      text-transform: capitalize;
+      color: transparent;
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 89.5%;
+      -webkit-text-stroke: 2px var(--text-color-white);
+      margin-bottom: 2rem;
+    }
+  }
+  &__contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+  &__description {
+    gap: 1rem;
+    &--title {
+      font-size: 2.5rem;
+      line-height: 1.5;
+      text-decoration: solid;
+    }
+    &--summary {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+    &--link {
+      display: flex;
+      align-items: center;
+      & span {
+        color: var(--text-color-red);
+        font-size: 1.5rem;
+      }
+      & i {
+        font-size: 1.5rem;
+        color: var(--text-color-red);
+        padding: 0.5rem 0 0 1rem;
+        &:hover {
+          transform: translateX(3%);
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media screen and (min-width: 768px) {
+  .blog__contents {
+    flex-direction: row;
+  }
+  .blog__description {
+    align-self: flex-start;
+  }
+
+  .blog__container--header {
+    font-size: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .blog__contents {
+    flex-direction: row;
+    padding: 2rem 8rem;
+  }
+  .blog__container--header {
+    font-size: 11rem;
+    margin-bottom: 8rem;
+  }
+  .blog__description--title {
+    font-size: 3rem;
+  }
+  .blog__description--summary {
+    font-size: 1.6rem;
+  }
+}

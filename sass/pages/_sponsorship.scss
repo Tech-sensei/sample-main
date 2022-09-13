@@ -1,0 +1,174 @@
+@use "../abstracts" as a;
+
+.sponsor {
+  height: 100vh;
+
+  &__main {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > span {
+      font-size: 4rem;
+      font-weight: 700;
+      padding: 1rem;
+      color: var(--text-color-white);
+      
+    }
+
+    & > span:first-of-type {
+      text-transform: uppercase;
+      background: var(--text-color-red);
+    }
+  }
+
+  &__sub {
+    display: flex;
+    align-items: center;
+    background-color: var(--text-color-red);
+    height: 50%;
+    padding: 0 23.5rem;
+    & > p {
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 4rem;
+      font-weight: 700;
+      padding: 1rem;
+      color: var(--text-color-white);
+    }
+  }
+
+  &__details {
+    margin: 8rem 16rem;
+    display: grid;
+    gap: 4rem;
+  }
+
+  &__audience {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 6.5rem;
+  }
+  
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+
+    & > span {
+      color: var(--text-color-red);
+      font-size: 8rem;
+    }
+
+    & > p {
+      font-size: 1.75rem;
+      text-transform: capitalize;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 15rem;
+    gap: 1rem;
+  }
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    
+  }
+
+  &__description {
+    font-size: 1.65rem;
+    font-weight: 500;
+  }
+
+  &__triats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: start;
+    font-size: 1.5rem;
+    font-weight: 600;
+    gap: .5rem;
+  }
+
+  &__trust,
+  &__action {
+    margin: 4rem;
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+  }
+
+  &__partner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__action {
+    margin-top: 40rem;
+  }
+  
+  &__button {
+    margin: auto;
+    width: 16.5rem;
+    padding: 1.5rem 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+    background: var(--text-color-red);
+
+    &:hover {
+      transform: translateY(-.2rem);
+    }
+
+    &:active {
+      transform: translateY(.5rem);
+    }
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .sponsor {
+    &__sub {
+      padding: 0 8rem;
+    }
+    &__details {
+      margin: 4rem 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .sponsor {
+    &__sub {
+      padding: 0 4rem;
+      & > p {
+        font-size: 3rem;
+      }
+    }
+    &__audience {
+      flex-direction: column;
+    }
+    &__about {
+      
+      padding: 4rem 0;
+    }
+    &__trust,
+    &__action {
+    margin: 0;
+  }
+    &__triats,&__partner {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+}

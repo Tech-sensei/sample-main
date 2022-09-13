@@ -1,0 +1,87 @@
+.speakers {
+  &__wrapper {
+    &--contents {
+      display: flex;
+      flex-direction: column;;
+      gap: 3rem;
+      margin: 5rem 0;
+      &_left {
+        flex: 1.5;
+        background-color: var(--text-color-red);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 2rem;
+
+        .speakers__photo {
+          height: 300px;
+        }
+
+        .speakers__company {
+          font-size: 1.8rem;
+          font-weight: 700;
+          margin-top: 2rem;
+        }
+
+        .speakers__name {
+          font-size: 1.5rem;
+        }
+        .speakers__role {
+          font-size: 1.3rem;
+        }
+
+        .speakers__social-icons {
+          i {
+            color: var(--body-color);
+            font-size: 2rem;
+          }
+          i:hover {
+            color: var(--text-color-white);
+          }
+        }
+      }
+      &_right {
+        flex: 1.5;
+        padding: 0;
+        .speakers__bio {
+          font-weight: 700;
+          font-size: 3rem;
+          margin-bottom: 2rem;
+        }
+        .speakers__description {
+          font-size: 1.5rem;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+  .speakers {
+    &__wrapper {
+      &--contents {
+        flex-direction: row;
+        &_right {
+          padding: 3.5rem 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 968px) {
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+@media screen and (max-width: 968px) {
+}

@@ -1,0 +1,103 @@
+.eventgain {
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    // padding: 8rem 0;
+    &--header {
+      font-size: 3rem;
+      margin-bottom: 5rem;
+      .eventgain-header {
+        // line-height: 1.6;
+        // font-weight: 700;
+        // color: var(--text-color-white);
+        // position: relative;
+      }
+      // .eventgain-header::before {
+      //   content: "";
+      //   position: absolute;
+      //   bottom: -8px;
+      //   left: 0;
+      //   width: 60px;
+      //   height: 4px;
+      //   background-color: var(--text-color-red);
+      // }
+    }
+    &--contents {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+      &_item {
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // gap: 2rem;
+        // padding: 0 1rem;
+        .contents__item--header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          padding-bottom: 1rem;
+          .contents__item--header-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff58602d;
+            height: 4.5rem;
+            width: 4.5rem;
+            border-radius: 50%;
+            & span {
+              color: var(--text-color-red);
+            }
+          }
+          h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            // text-transform: uppercase;
+            color: var(--text-color-red);
+          }
+        }
+        .contents__item--summary {
+          p {
+            line-height: 1.5;
+            font-size: 1.4rem;
+            text-align: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+  .eventgain__container {
+    flex-direction: row;
+    gap: 40rem;
+    text-align: left;
+    margin-bottom: 5rem;
+    &--header {
+      transform: rotate(-90deg);
+      font-size: 4.5rem;
+      align-self: flex-end;
+    }
+  }
+  .contents__item--header {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+}
+
+@media screen and (min-width: 968px) {
+}
+
+@media screen and (min-width: 1200px) {
+}
